@@ -61,6 +61,3 @@ Users can also control the robot manually by entering joint angles or target pos
 
 
 
-**Chaitra D Murthy**
-
-B.Tech – Computer Engineering (Artificial Intelligence)
