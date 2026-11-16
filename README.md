@@ -122,14 +122,23 @@ git remote add origin <repo-url>
 # 6. Push the code to GitHub
 git push -u origin main
 ```
-Screenshot of the output
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9e5e8aa-5a86-4e18-9351-df71e7a79f2a" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd638773-d652-40c1-bd3b-6b4bc22c94df" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00b520ce-5621-47c7-a98f-37b501690bb7" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/669179ef-d4a1-402b-9938-098f004d90c5" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb" />
+## Screenshots
+
+### Main Assembly-Line Simulation
+![Main Simulation](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9e5e8aa-5a86-4e18-9351-df71e7a79f2a" />)
+
+### Manual Robot Control
+![Manual Control](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1" />)
+
+### Automatic Pick-and-Place
+![Automatic Mode](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd638773-d652-40c1-bd3b-6b4bc22c94df" />)
+
+### Kinematics Analysis
+![Kinematics](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003" />)
+
+### Trajectory Analysis
+![Trajectory Analysis](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb" />)
+
 
 
 
