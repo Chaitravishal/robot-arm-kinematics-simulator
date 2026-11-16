@@ -129,14 +129,16 @@ git push -u origin main
 
 ### Manual Robot Control
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1" />
+### Gripper landed on the pick
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/72e31dfb-5f88-471c-9a0b-cca7aeae1dba" />
 
 ### Automatic Pick-and-Place
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd638773-d652-40c1-bd3b-6b4bc22c94df" />
 
-### Kinematics Analysis
+### Kinematics Analysis and Trajectory Analysis
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003" />
 
-### Trajectory Analysis
+### Documentation
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb" />
 
 
