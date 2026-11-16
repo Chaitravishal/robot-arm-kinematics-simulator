@@ -1,109 +1,110 @@
 # SCARA Robot Arm Assembly-Line Simulator
 
-## 🏭 1. Project Overview
+## About the Project
 
-This simulator provides an interactive, mathematically rigorous simulation of a **planar 2R SCARA-style robotic arm** with a parallel two-jaw gripper working on an industrial assembly line:
-- **Scene:** 2D top-view workcell with an input conveyor belt on the left, an output conveyor belt on the right, and the robot base centered at $(0, 0)$.
-- **Conveyor Workflow:** Cardboard-brown boxes arrive on the input belt, queue up, and stop at the marked **PICK station**. The robot arm picks each box, transfers it to the marked **PLACE station** on the output belt, and releases it as it slides downstream.
-- **Dual Operation Modes:**
-  - **Manual Mode:** Forward kinematics control via joint sliders/inputs with live gripper distance check, visual pick-and-place tracking, and hint calculation.
-  - **Automatic Mode:** Inverse kinematics and quintic polynomial trajectory execution across Point-to-Point (joint arc), Continuous Path (Cartesian straight line), or both consecutively.
+The SCARA Robot Arm Assembly-Line Simulator is an interactive application that demonstrates how a robotic arm performs pick-and-place operations in an industrial assembly line.
 
----
+The simulation consists of two conveyor belts and a robotic arm with a two-jaw gripper. Boxes arrive on the input conveyor, the robot picks them up, moves them to the output conveyor, and releases them.
 
-## 🚀 2. Setup and Execution
+Users can operate the robot manually or run automatic pick-and-place operations.
 
-### Local Environment Setup
+## Features
+
+- **Assembly-Line Simulation:** Visualizes boxes moving between two conveyor belts.
+- **Manual Mode:** Control the robotic arm by adjusting its joint angles.
+- **Automatic Mode:** Run pick-and-place operations automatically.
+- **Forward Kinematics:** Calculate the gripper position using joint angles.
+- **Inverse Kinematics:** Calculate the joint angles required to reach a target position.
+- **Trajectory Planning:** Compare point-to-point and continuous robot movements.
+- **Simulation Controls:** Play, pause, reset, and control the simulation timeline.
+- **Live Visualization:** Observe robot movement, gripper position, and trajectory paths.
+- **Kinematics Analysis:** Explore robot positions, movement paths, and trajectory graphs.
+
+## Screenshots
+
+### 1. Main Assembly-Line Simulation
+
+Shows the complete workcell, including the robotic arm, input conveyor, output conveyor, and boxes.
+
+![Main Assembly-Line Simulation](https://github.com/user-attachments/assets/c9e5e8aa-5a86-4e18-9351-df71e7a79f2a)
+
+### 2. Manual Robot Control
+
+Allows users to adjust the robot's joint angles and control its movement.
+
+![Manual Robot Control](https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1)
+
+### 3. Gripper at the Pick Station
+
+Shows the robotic gripper positioned to pick up a box from the input conveyor.
+
+![Gripper at Pick Station](https://github.com/user-attachments/assets/72e31dfb-5f88-471c-9a0b-cca7aeae1dba)
+
+### 4. Automatic Pick-and-Place
+
+Demonstrates the robot automatically moving a box from the input conveyor to the output conveyor.
+
+![Automatic Pick-and-Place](https://github.com/user-attachments/assets/cd638773-d652-40c1-bd3b-6b4bc22c94df)
+
+### 5. Kinematics and Trajectory Analysis
+
+Displays robot kinematics calculations and graphs used to understand its movement.
+
+![Kinematics and Trajectory Analysis](https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003)
+
+### 6. Project Documentation
+
+Provides explanations of the robot model, kinematics, transformations, and trajectory planning.
+
+![Project Documentation](https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb)
+
+## Technologies Used
+
+- Python
+- Streamlit
+- Plotly
+- NumPy
+- pandas
+
+## How to Run the Project
+
+### Step 1: Clone the Repository
+
 ```bash
-# Navigate to the project root directory
+git clone https://github.com/Chaitravishal/robot-arm-kinematics-simulator.git
+```
+
+### Step 2: Open the Project Folder
+
+```bash
 cd robot-arm-kinematics-simulator
+```
 
-# Create and activate a Python virtual environment
+### Step 3: Create a Virtual Environment
+
+```bash
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1   # Windows PowerShell
-# source .venv/bin/activate    # Linux / macOS
+```
 
-# Install required dependencies
+### Step 4: Activate the Virtual Environment
+
+For Windows PowerShell:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### Step 5: Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Running the Simulator
+### Step 6: Start the Application
+
 ```bash
 streamlit run app.py
 ```
-Open your browser to `http://localhost:8501`.
 
----
-
-## 📦 3. Features & User Interface
-
-### Assembly Line (The Simulation)
-- **Mode Selector:** Choose between **Manual Mode** and **Automatic Mode**.
-- **Manual Mode:**
-  - Inputs for Joint 1 ($\theta_1$) and Joint 2 ($\theta_2$) angles in degrees.
-  - `Move arm` and `Reset` buttons.
-  - **Proximity Grasping:** If the gripper reaches within $0.05\text{ m}$ of the box at PICK, the jaws close and grasp the box. Moving to within $0.05\text{ m}$ of PLACE releases the box onto the output conveyor and increments the delivery counter.
-  - **Real-Time Distance Readout:** Shows exact distance from the active target.
-  - **Show Hint:** Solves inverse kinematics and displays the exact target angles.
-- **Automatic Mode:**
-  - Automatic inverse kinematics solver for pick and place targets.
-  - **Prominent Trajectory Selector:**
-    1. *Point-to-point (joint-space interpolation, curved tool path)*
-    2. *Continuous path (straight line, IK at every waypoint)*
-    3. *Both (consecutive cycles of each)*
-  - **Dynamic Path Highlighting:** The chosen trajectory is drawn thicker and clearly traced by the robot arm during task execution.
-  - **Playback Controls:** `▶ Play`, `⏸ Pause`, `↺ Reset`, and an interactive timeline scrubbing slider.
-- **Real-Time Status Banner:** Live display of the current step description, $\theta_1$, $\theta_2$, gripper $(X, Y)$ position, and gripper state (`Open` / `Closed (Holding Box)`).
-- **2D Top-View Factory Floor Plan:** Authentic industrial floor plan rendering with dark rubber belts, side rails, rollers, mounting legs, and cleanly positioned labels (preventing any overlap with boxes). Axes, ticks, and gridlines are hidden for a clean factory floor appearance, with a clear horizontal legend placed under the picture.
-- **"How to read the picture":** Informative caption under the canvas for fast student viva and demonstration understanding.
-
-## 🐙 5. GitHub Publishing Instructions
-
-To publish this project to GitHub, execute the following commands in your terminal:
-
-```bash
-# 1. Initialize local Git repository
-git init
-
-# 2. Stage all project files
-git add .
-
-# 3. Commit the implementation
-git commit -m "Complete SCARA Robot Arm Assembly-Line Simulator"
-
-# 4. Rename default branch to main
-git branch -M main
-
-# 5. Connect to your GitHub repository (replace with your repository URL)
-git remote add origin <repo-url>
-
-# 6. Push the code to GitHub
-git push -u origin main
-```
-## Screenshots
-
-### Main Assembly-Line Simulation
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9e5e8aa-5a86-4e18-9351-df71e7a79f2a" />
-
-### Manual Robot Control
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1" />
-
-### Gripper landed on the pick
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/72e31dfb-5f88-471c-9a0b-cca7aeae1dba" />
-
-### Automatic Pick-and-Place
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cd638773-d652-40c1-bd3b-6b4bc22c94df" />
-
-### Kinematics Analysis and Trajectory Analysis
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003" />
-
-### Documentation
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb" />
-
-
-
-
-
-
-
-
+**SCARA Robot Arm Assembly-Line Simulator**  
+An interactive demonstration of robotic movement, kinematics, and automated pick-and-place operations.
