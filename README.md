@@ -129,6 +129,7 @@ git push -u origin main
 
 ### Manual Robot Control
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/002370b9-d218-4abc-8461-958c67292bd1" />
+
 ### Gripper landed on the pick
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/72e31dfb-5f88-471c-9a0b-cca7aeae1dba" />
 
