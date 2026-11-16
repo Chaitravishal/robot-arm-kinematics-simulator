@@ -37,9 +37,7 @@ Open your browser to `http://localhost:8501`.
 
 ## 📦 3. Features & User Interface
 
-The application is structured into 3 dedicated tabs:
-
-### Tab 1: Assembly Line (The Simulation)
+### Assembly Line (The Simulation)
 - **Mode Selector:** Choose between **Manual Mode** and **Automatic Mode**.
 - **Manual Mode:**
   - Inputs for Joint 1 ($\theta_1$) and Joint 2 ($\theta_2$) angles in degrees.
@@ -58,20 +56,6 @@ The application is structured into 3 dedicated tabs:
 - **Real-Time Status Banner:** Live display of the current step description, $\theta_1$, $\theta_2$, gripper $(X, Y)$ position, and gripper state (`Open` / `Closed (Holding Box)`).
 - **2D Top-View Factory Floor Plan:** Authentic industrial floor plan rendering with dark rubber belts, side rails, rollers, mounting legs, and cleanly positioned labels (preventing any overlap with boxes). Axes, ticks, and gridlines are hidden for a clean factory floor appearance, with a clear horizontal legend placed under the picture.
 - **"How to read the picture":** Informative caption under the canvas for fast student viva and demonstration understanding.
-
-### Tab 2: Kinematics and Trajectory Analysis
-- **Forward Kinematics (FK):** Angle sliders with live $(X, Y)$ position, radial reach, orientation $\phi$, and live $3 \times 3$ planar homogeneous transformation matrices:
-  - $T_{01} = R_z(\theta_1) \cdot T_x(L_1)$
-  - $T_{12} = R_z(\theta_2) \cdot T_x(L_2)$
-  - $T_{02} = T_{01} \cdot T_{12}$
-- **Inverse Kinematics (IK) & Reachability:** Interactive target coordinate $(X, Y)$ inputs with reachability validation ($|L_1 - L_2| \le r \le L_1 + L_2$), $c_2 = \cos(\theta_2)$, and both **Elbow-Right** ($\theta_2 \ge 0$) and **Elbow-Left** ($\theta_2 \le 0$) angle solutions.
-- **PTP vs. Continuous Benchmark:** Complete quantitative comparison table covering path length, straight-line distance, path efficiency $\%$, maximum deviation from the line, joint travel, peak joint speeds ($\text{deg/s}$), peak tool speed ($\text{m/s}$), feasibility, and an engineering verdict.
-- **Joint Angles vs. Time Profile:** Plotly curves showing $\theta_1(t)$ and $\theta_2(t)$ over time.
-
-### Tab 3: Documentation
-- Comprehensive engineering documentation with SCARA parameters, assumptions, Denavit-Hartenberg (DH) table, analytical FK/IK derivations, transformation explanations, quintic polynomial time scaling, and performance metrics definitions.
-
----
 
 ## 🐙 5. GitHub Publishing Instructions
 
