@@ -52,12 +52,6 @@ Displays robot kinematics calculations and graphs used to understand its movemen
 
 ![Kinematics and Trajectory Analysis](https://github.com/user-attachments/assets/8b73712f-07af-433c-a855-1e7b23717003)
 
-### 6. Project Documentation
-
-Provides explanations of the robot model, kinematics, transformations, and trajectory planning.
-
-![Project Documentation](https://github.com/user-attachments/assets/bd4e1264-b173-47d7-b619-c951e1f490cb)
-
 ## Technologies Used
 
 - Python
