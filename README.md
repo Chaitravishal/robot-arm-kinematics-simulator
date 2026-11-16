@@ -1,11 +1,5 @@
 # SCARA Robot Arm Assembly-Line Simulator
 
-**Subject:** Robot Kinematics and Control (Mini Project 2)  
-**Stack:** Python, Streamlit, Plotly, NumPy, pandas  
-**Theme:** Light "morning in the factory" aesthetic (Cream `#fff8ea`, soft grey conveyors, blue Link 1, orange Link 2, cardboard-brown boxes)
-
----
-
 ## 🏭 1. Project Overview
 
 This simulator provides an interactive, mathematically rigorous simulation of a **planar 2R SCARA-style robotic arm** with a parallel two-jaw gripper working on an industrial assembly line:
@@ -76,26 +70,6 @@ The application is structured into 3 dedicated tabs:
 
 ### Tab 3: Documentation
 - Comprehensive engineering documentation with SCARA parameters, assumptions, Denavit-Hartenberg (DH) table, analytical FK/IK derivations, transformation explanations, quintic polynomial time scaling, and performance metrics definitions.
-
----
-
-## 🧮 4. Mathematical Equations
-
-### Forward Kinematics (FK)
-$$x = L_1 \cos(\theta_1) + L_2 \cos(\theta_1 + \theta_2)$$
-$$y = L_1 \sin(\theta_1) + L_2 \sin(\theta_1 + \theta_2)$$
-$$\phi = \theta_1 + \theta_2$$
-
-### Inverse Kinematics (IK)
-$$c_2 = \frac{x^2 + y^2 - L_1^2 - L_2^2}{2 L_1 L_2}$$
-$$\theta_2 = \pm \arccos(c_2)$$
-$$\theta_1 = \text{atan2}(y, x) - \text{atan2}(L_2 \sin\theta_2, L_1 + L_2 \cos\theta_2)$$
-
-### Quintic Time Scaling
-$$s(u) = 10u^3 - 15u^4 + 6u^5, \quad u \in [0, 1]$$
-$$\dot{s}(u) = 30u^2 - 60u^3 + 30u^4$$
-$$\ddot{s}(u) = 60u - 180u^2 + 120u^3$$
-Guarantees zero velocity and zero acceleration at movement boundaries.
 
 ---
 
